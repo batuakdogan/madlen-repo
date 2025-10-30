@@ -13,9 +13,9 @@ const sdk = new NodeSDK({
 
 sdk.start();
 
-console.log('🔍 OpenTelemetry tracing initialized');
-console.log('📊 Traces will be sent to Jaeger at http://localhost:4318/v1/traces');
-console.log('🌐 View traces at http://localhost:16686');
+console.log('OpenTelemetry tracing initialized');
+console.log('Traces will be sent to Jaeger at http://localhost:4318/v1/traces');
+console.log('View traces at http://localhost:16686');
 
 process.on('SIGTERM', () => {
   sdk

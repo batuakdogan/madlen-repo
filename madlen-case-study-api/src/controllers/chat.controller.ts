@@ -15,7 +15,7 @@ export async function handleChatMessage(req: Request, res: Response): Promise<vo
       return;
     }
 
-    // Generate a new sessionId if not provided
+    // new session id
     const currentSessionId = sessionId || uuidv4();
 
     const aiResponse = await getOpenRouterReply(message, currentSessionId, model);
