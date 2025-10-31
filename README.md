@@ -69,7 +69,7 @@ cp .env.example .env
 # Sunucuyu başlatın
 npm run dev
 ```
-#Örnek .env içeriği
+### 4. Örnek .env içeriği
 ```bash
 OPENROUTER_API_KEY="KEY"
 PORT=8000
@@ -82,7 +82,7 @@ OPENROUTER_MODEL="meta-llama/llama-3.2-3b-instruct:free"
 
 Backend `http://localhost:8000` adresinde çalışmaya başlayacaktır.
 
-### 4. Frontend'i Başlatın (Yeni Terminalde)
+### 5. Frontend'i Başlatın (Yeni Terminalde)
 ```bash
 # Frontend klasörüne gidin
 cd madlen-case-study-frontend
