@@ -6,25 +6,3 @@
   margin: 0 auto;
   background-color: var(--background-color);
 }
-
-.error {
-  padding: 1rem 2rem;
-  background-color: var(--error-bg);
-  color: var(--error-text);
-  border: none;
-  margin: 0;
-  text-align: center;
-  font-weight: 500;
-  animation: slideDown 0.3s ease-out;
-}
-
-@keyframes slideDown {
-  from {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
