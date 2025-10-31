@@ -8,3 +8,9 @@ export interface Model {
   name: string;
 }
 
+export interface ApiError {
+  message: string;
+  statusCode?: number;
+  details?: unknown;
+}
+

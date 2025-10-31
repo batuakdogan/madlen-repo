@@ -42,12 +42,12 @@ router.get('/', (req: Request, res: Response) => {
       name: 'Llama 3.2'
     },
     {
-      id: 'google/gemma-2-9b-it:free',
-      name: 'Gemma 2'
+      id: 'google/gemma-3-27b-it:free',
+      name: 'Gemma 3'
     },
     {
       id: 'mistralai/mistral-7b-instruct:free',
-      name: 'Mistral 7B'
+      name: 'Mistral'
     }
     
   ];

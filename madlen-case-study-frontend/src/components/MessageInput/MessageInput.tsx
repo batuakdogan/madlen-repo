@@ -49,7 +49,7 @@ const MessageInput = ({ onSendMessage, isLoading }: MessageInputProps) => {
         <textarea
           ref={textareaRef}
           className={styles.textarea}
-          placeholder="Type your message..."
+          placeholder="Ask me anything... (Press Enter to send, Shift+Enter for new line)"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           onKeyDown={handleKeyDown}

@@ -32,23 +32,126 @@
 
 .emptyState {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
-  color: var(--text-muted);
-  font-size: 1rem;
-  text-align: center;
   padding: 2rem;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in;
 }
 
-.emptyState p {
-  margin: 0;
-  opacity: 0.7;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.emptyStateIcon {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.emptyStateTitle {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 0 0 0.75rem 0;
+}
+
+.emptyStateDescription {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin: 0 0 2.5rem 0;
+  max-width: 400px;
+  line-height: 1.5;
+}
+
+.suggestionCards {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 600px;
+}
+
+.suggestionCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.25rem 1.5rem;
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  min-width: 140px;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.suggestionCard:hover {
+  background-color: var(--surface-hover);
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+.cardIcon {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.cardText {
+  font-size: 0.875rem;
+  color: var(--text-color);
+  font-weight: 500;
 }
 
 @media (max-width: 768px) {
   .container {
     padding: 1.5rem;
     gap: 0.75rem;
+  }
+
+  .emptyStateTitle {
+    font-size: 1.5rem;
+  }
+
+  .emptyStateDescription {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+
+  .suggestionCards {
+    gap: 0.75rem;
+  }
+
+  .suggestionCard {
+    min-width: 120px;
+    padding: 1rem 1.25rem;
+  }
+
+  .cardIcon {
+    font-size: 1.25rem;
+  }
+
+  .cardText {
+    font-size: 0.8rem;
   }
 }
