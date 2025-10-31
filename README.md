@@ -11,6 +11,11 @@ Uygulamanın temel amacı, kullanıcıların farklı yapay zeka modelleri arası
 
 *   **Backend (Express.js & TypeScript):** Bu projenin hızlı ve hafif olması hedeflendi. Büyük framework'ler yerine (Spring Boot, Django) Express.js'in minimalist yapısı tercih edildi. TypeScript kullanımı ise, özellikle frontend ile aynı dilde geliştirme yaparken uçtan uca tip güvenliği sağlayarak hata olasılığını azalttı.
 *   Backend tarafında, Express.js'in temel yeteneklerini endüstri standardı kütüphanelerle zenginleştirdik. Harici API'lerle (OpenRouter gibi) iletişim kurmak için axios'u HTTP istemcisi olarak kullandık. Güvenlik katmanında, API anahtarı gibi hassas bilgileri koddan ayırmak için dotenv'den yararlanırken, frontend'den gelen isteklerin güvenli bir şekilde kabul edilmesi için cors middleware'ini entegre ettik. Geliştirici deneyimini ve test edilebilirliği artırmak amacıyla, swagger-ui-express ve swagger-jsdoc paketleriyle otomatik ve interaktif bir API dokümantasyon sayfası (/api-docs) oluşturduk. Uygulama mantığı tarafında, her sohbet oturumuna benzersiz kimlikler atamak için uuid kütüphanesini kullandık. Son olarak, projenin gözlemlenebilirliğini sağlamak için @opentelemetry/... paketlerini kullanarak tüm sistemin performansını izleyip bu verileri Jaeger'a gönderdik.
+*   Projenin backend'i, temiz ve ölçeklenebilir bir Katmanlı Mimari kullanılarak tasarlanmıştır. Bu yapı, kodun bakımını, test edilebilirliğini ve anlaşılırlığını artırır.
+
+İstek akışı aşağıdaki gibi işler:
+
+**Rota Katmanı (`/routes`) → Controller Katmanı (`/controllers`) → Servis Katmanı (`/services`)**
 
 *   **Frontend (React & Vite & TypeScript):** React, en popüler frontend frameworklerinden birisi olduğu için tercih edildi. Geliştirme sürecini hızlandırmak için Vite tercih edildi. Frontend'de state yönetimi için, projenin ölçeğine en uygun çözüm olan React'in kendi yerleşik hook'larını (useState, useEffect) kullandık. Harici bir kütüphaneye gerek duymadık.
 *   Backend apimiz ile iletişim kurmak için Axios kullandık.
