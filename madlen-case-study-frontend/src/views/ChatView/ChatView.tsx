@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from 'react';
 import type { Message, Model } from '../../types';
 import { fetchModels, postChatMessage } from '../../services/api';
 import { getOperationErrorMessage } from '../../utils/errorHandler';
-import Header from '../../components/Header/Header';
 import ModelSelector from '../../components/ModelSelector/ModelSelector';
 import MessageList from '../../components/MessageList/MessageList';
 import MessageInput from '../../components/MessageInput/MessageInput';
@@ -100,12 +99,13 @@ const ChatView = () => {
 
   return (
     <div className={styles.container}>
-      <Header />
-      <ModelSelector
-        models={models}
-        selectedModel={selectedModel}
-        onModelChange={handleModelChange}
-      />
+      <div className={styles.topBar}>
+        <ModelSelector
+          models={models}
+          selectedModel={selectedModel}
+          onModelChange={handleModelChange}
+        />
+      </div>
       {error && <ErrorDisplay message={error} onDismiss={handleDismissError} autoDismiss />}
       <MessageList messages={messages} ref={messagesEndRef} />
       {isLoading && <LoadingIndicator />}
