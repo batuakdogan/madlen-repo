@@ -1,0 +1,12 @@
+import styles from './Header.module.css';
+
+const Header = () => {
+  return (
+    <header className={styles.header}>
+      <h1>Madlen Case Study</h1>
+    </header>
+  );
+};
+
+export default Header;
+

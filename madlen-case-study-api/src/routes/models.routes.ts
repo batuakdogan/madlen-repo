@@ -39,12 +39,17 @@ router.get('/', (req: Request, res: Response) => {
   const models = [
     {
       id: 'meta-llama/llama-3.2-3b-instruct:free',
-      name: 'Llama 3.2 3B (Free)'
+      name: 'Llama 3.2'
     },
     {
       id: 'google/gemma-2-9b-it:free',
-      name: 'Gemma 2 9B (Free)'
+      name: 'Gemma 2'
+    },
+    {
+      id: 'mistralai/mistral-7b-instruct:free',
+      name: 'Mistral 7B'
     }
+    
   ];
 
   res.status(200).json({
