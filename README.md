@@ -13,7 +13,8 @@ Uygulamanın temel amacı, kullanıcıların farklı yapay zeka modelleri arası
 *   Backend tarafında, Express.js'in temel yeteneklerini endüstri standardı kütüphanelerle zenginleştirdik. Harici API'lerle (OpenRouter gibi) iletişim kurmak için axios'u HTTP istemcisi olarak kullandık. Güvenlik katmanında, API anahtarı gibi hassas bilgileri koddan ayırmak için dotenv'den yararlanırken, frontend'den gelen isteklerin güvenli bir şekilde kabul edilmesi için cors middleware'ini entegre ettik. Geliştirici deneyimini ve test edilebilirliği artırmak amacıyla, swagger-ui-express ve swagger-jsdoc paketleriyle otomatik ve interaktif bir API dokümantasyon sayfası (/api-docs) oluşturduk. Uygulama mantığı tarafında, her sohbet oturumuna benzersiz kimlikler atamak için uuid kütüphanesini kullandık. Son olarak, projenin gözlemlenebilirliğini sağlamak için @opentelemetry/... paketlerini kullanarak tüm sistemin performansını izleyip bu verileri Jaeger'a gönderdik.
 
 *   **Frontend (React & Vite & TypeScript):** React, en popüler frontend frameworklerinden birisi olduğu için tercih edildi. Geliştirme sürecini hızlandırmak için Vite tercih edildi. Frontend'de state yönetimi için, projenin ölçeğine en uygun çözüm olan React'in kendi yerleşik hook'larını (useState, useEffect) kullandık. Harici bir kütüphaneye gerek duymadık.
-*   Backend apimiz ile iletişim kurmak için Axios kullandık. 
+*   Backend apimiz ile iletişim kurmak için Axios kullandık.
+*   Open Routuer'dan seçtiğim modeller, Türkçe dilinde kararlı cevaplar veremedikleri için uygulamanın arayüzünü ingilizce olarak tasarladım. 
 
 *   **Gözlemlenebilirlik (OpenTelemetry & Jaeger):** Uygulama performansını analiz edebilmek için case-study gereksinimlerinde OpenTelemetry istendi ve projeye entegre edildi. Jaeger ise, toplanan verileri görselleştirmek için bir arayüz sundu.
 
