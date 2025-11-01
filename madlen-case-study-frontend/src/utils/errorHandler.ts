@@ -84,7 +84,7 @@ export const extractErrorMessage = (error: unknown): ApiError => {
 
   // Handle unknown errors
   return {
-    message: 'An unknown error occurred. Please try again.',
+    message: 'An error occurred in the open router model. Please try again.',
   };
 };
 
