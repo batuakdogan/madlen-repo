@@ -19,8 +19,6 @@ Uygulamanın temel amacı, kullanıcıların farklı yapay zeka modelleri arası
 
 *   **Frontend (React & Vite & TypeScript):** React, en popüler frontend frameworklerinden birisi olduğu için tercih edildi. Geliştirme sürecini hızlandırmak için Vite tercih edildi. Frontend'de state yönetimi için, projenin ölçeğine en uygun çözüm olan React'in kendi yerleşik hook'larını (useState, useEffect) kullandık. Harici bir kütüphaneye gerek duymadık.
 *   Backend apimiz ile iletişim kurmak için Axios kullandık.
-*   Open Routuer'dan seçtiğim modeller, Türkçe dilinde kararlı cevaplar veremedikleri için uygulamanın arayüzünü ingilizce olarak tasarladım. 
-
 *   **Gözlemlenebilirlik (OpenTelemetry & Jaeger):** Uygulama performansını analiz edebilmek için case-study gereksinimlerinde OpenTelemetry istendi ve projeye entegre edildi. Jaeger ise, toplanan verileri görselleştirmek için bir arayüz sundu.
 
 ## Projeyi Yerel Makinede Çalıştırma
