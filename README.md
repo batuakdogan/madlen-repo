@@ -34,7 +34,8 @@ cd madlen-case-study
 ### 2. Jaeger'ı Başlatın (Docker ile)
 Performans takibi için Jaeger servisini başlatın.
 ```bash
-# Ana proje klasöründeyken çalıştırın
+# Ana Backend (API) proje klasöründeyken çalıştırın
+cd madlen-case-study-api
 docker-compose up -d
 ```
 
